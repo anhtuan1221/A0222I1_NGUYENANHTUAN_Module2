@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[][] array = new int[5][5];
+        int[][] array = new int[3][3];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                array[i][j] = new Random().nextInt(100);
+                array[i][j] = new Random().nextInt(3);
                 System.out.print(array[i][j] + " ");
             }
             System.out.println("");
