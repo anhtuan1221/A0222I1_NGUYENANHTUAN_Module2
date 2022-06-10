@@ -1,6 +1,8 @@
-package ss6_inhertiance.practice.geometry;
+package ss7_abstract_class_interface.excercise.interface_resizable;
 
-public class Shape {
+import ss7_abstract_class_interface.excercise.interface_resizable.Resizeable;
+
+public abstract class Shape implements Resizeable {
     private String color = "green";
     private boolean filled = true;
 
@@ -9,7 +11,7 @@ public class Shape {
 
     public Shape(String color, boolean filled) {
         this.color = color;
-        this.filled = filled;
+        this.filled = true;
     }
 
     public String getColor() {
@@ -28,7 +30,11 @@ public class Shape {
         this.filled = filled;
     }
 
+    @Override
     public String toString() {
-        return String.format("A Shape with color of %s and %s",  getColor(), filled ? "filled" :"not filled");
+        return "Shape{" +
+                "color='" + color + '\'' +
+                ", filled=" + filled +
+                '}';
     }
 }

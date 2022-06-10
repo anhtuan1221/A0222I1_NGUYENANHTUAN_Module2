@@ -1,4 +1,6 @@
-package ss6_inhertiance.practice.geometry;
+package ss7_abstract_class_interface.excercise.interface_resizable;
+
+import ss7_abstract_class_interface.excercise.interface_resizable.Rectangle;
 
 public class Square extends Rectangle {
     public Square() {
@@ -16,11 +18,9 @@ public class Square extends Rectangle {
         return getWidth();
     }
 
-    ;
-
     public void setSide(double side) {
-        setWidth(side);
-        setLength(side);
+        super.setWidth(side);
+        super.setHeight(side);
     }
 
     @Override
@@ -29,15 +29,12 @@ public class Square extends Rectangle {
     }
 
     @Override
-    public void setLength(double length) {
-        setSide(length);
+    public void setHeight(double height) {
+        setSide(height);
     }
 
     @Override
     public String toString() {
-        return "A Square with side="
-                + getSide()
-                + ", which is a subclass of "
-                + super.toString();
+        return "A square with side= " + getSide() + ",which is a subclass of " + super.toString();
     }
 }
