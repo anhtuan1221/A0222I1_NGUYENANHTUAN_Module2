@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ProductTest {
     public static void main(String[] args) {
-        ProductManager productManager = new ProductManager();
+       ProductManager productManager = new ProductManager();
         Scanner scanner = new Scanner(System.in);
         int choose = -1;
         while (choose != 0) {

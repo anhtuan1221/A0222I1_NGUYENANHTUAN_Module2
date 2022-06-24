@@ -6,12 +6,13 @@ public class ProductManager extends Product {
     public List<Product> list = new LinkedList<>();
     public static Scanner scanner = new Scanner(System.in);
 
-    public ProductManager() {
-        list.add(new Product(1, "tuan", 10));
-        list.add(new Product(400, "hai", 20));
-        list.add(new Product(10, "quang", 100));
-        list.add(new Product(20, "duc", 101));
-    }
+//    public  ProductManager() {
+//        System.out.println("Enter name ");
+//        String name = scanner.nextLine();
+//        System.out.println("Enter price");
+//        double price = Double.parseDouble(scanner.nextLine());
+//        list.add(new Product(name,price));
+//    }
 
     public void display() {
         System.out.println("List product: ");
@@ -22,13 +23,17 @@ public class ProductManager extends Product {
 
     public void addProduct() {
         System.out.println("Add Product");
-        System.out.println("Add ID");
-        int id = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Add ID");
+//        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Add name ");
         String name = scanner.nextLine();
         System.out.println("Add price");
         double price = Double.parseDouble(scanner.nextLine());
-        list.add(new Product(id, name, price));
+        int lastId = 0;
+        if (list.size() > 0) {
+            lastId = list.get(list.size()).getId();
+        }
+        list.add(new Product(lastId + 1, name, price));
         System.out.println("add success");
     }
 
